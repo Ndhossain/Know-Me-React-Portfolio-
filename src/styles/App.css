@@ -1,10 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+}
+
+span {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+}
+
+ul {
+  list-style: None;
+  padding-inline-start: 0px;
+  padding: 0rem !important;
+  margin: 0 !important;
 }
