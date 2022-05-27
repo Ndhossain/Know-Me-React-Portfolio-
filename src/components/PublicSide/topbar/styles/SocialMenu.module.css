@@ -1,0 +1,61 @@
+.socialIcon {
+  display: flex;
+  margin-right: 1em;
+  flex-direction: column;
+  position: relative;
+}
+
+.icon1,
+.icon2,
+.icon3,
+.icon4 {
+  padding: 5px;
+  font-size: 30px;
+  height: calc(.9em + 5px);
+  width: calc(.9em + 5px);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.icon1:hover,
+.icon2:hover,
+.icon3:hover,
+.icon4:hover {
+  background: linear-gradient(to right, rgba(165,56,227,.3), rgba(207,34,202,.5));
+  transition: 0.4s;
+}
+
+.icon1 > path {
+  color: rgb(59, 89, 152);
+}
+
+.icon2 > path {
+  color: rgb(0, 172, 237);
+}
+
+.icon3 > path {
+  color: rgb(233, 68, 117);
+}
+
+.icon4 > path {
+  color: #fff;
+}
+
+.socialButton {
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+}
+
+@media screen and (max-width: 620px) {
+  .socials {
+    flex-direction: column;
+  }
+
+  .socialBar {
+    position: absolute;
+    top: 20px;
+  }
+}

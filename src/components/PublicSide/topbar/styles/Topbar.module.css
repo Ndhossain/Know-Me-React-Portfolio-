@@ -1,0 +1,12 @@
+.topBar {
+  justify-content: space-between;
+  height: 5em;
+  background: #130F40;
+  align-items: center;
+}
+
+@media screen and (max-width: 620px) {
+  .topBar {
+    height: 3.5em;
+  }
+}

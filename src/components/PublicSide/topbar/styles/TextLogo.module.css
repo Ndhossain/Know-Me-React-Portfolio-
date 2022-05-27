@@ -1,0 +1,27 @@
+.logo {
+  display: none;
+}
+
+.logos {
+  align-items: center;
+}
+
+.logos > h1 {
+  font-weight: 700;
+  background: -webkit-linear-gradient(#a538e3, #cf22ca 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media screen and (max-width: 620px) {
+  .logo {
+    display: block;
+    width: 3em;
+    height: 3em;
+  }
+
+  .logos > h1 {
+      display: none;
+  }
+}
