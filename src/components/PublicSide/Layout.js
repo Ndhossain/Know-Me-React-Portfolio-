@@ -1,4 +1,4 @@
-import classes from "./Layout.module.css";
+import "./Layout.module.css";
 import HeroSec from "./heroSec/HeroSec";
 import Topbar from "./topbar/Topbar";
 
@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     <main>
       <Topbar />
       <HeroSec />
-      <div className={classes.layout}>{children}</div>
+      <div>{children}</div>
     </main>
   );
 }

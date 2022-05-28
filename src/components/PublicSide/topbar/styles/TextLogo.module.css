@@ -22,6 +22,6 @@
   }
 
   .logos > h1 {
-      display: none;
+    margin-top: 6px;
   }
 }

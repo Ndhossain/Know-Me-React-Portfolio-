@@ -42,7 +42,7 @@
 }
 
 .socialButton {
-  color: #fff;
+  display: none;
 }
 
 .socials {
@@ -57,5 +57,14 @@
   .socialBar {
     position: absolute;
     top: 20px;
+    background: #130F40;
+    left: -6px;
+    top: 30px;
+  }
+
+  .socialButton {
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
   }
 }
