@@ -1,4 +1,5 @@
-import Layout from "./Layout";
+import About from "./About/About";
+import Layout from "./layout/Layout";
 import Navbar from "./navbar/Navbar";
 
 export default function PublicSide() {
@@ -6,7 +7,7 @@ export default function PublicSide() {
     <div className="d-flex">
       <Navbar />
       <Layout>
-        
+        <About />
       </Layout>
     </div>
   );
