@@ -71,32 +71,6 @@ export default function Menu() {
           }}
           className={classes.menuItem}
         >
-          <span className="material-symbols-outlined">design_services</span>
-          <span
-            style={
-              show
-                ? { animation: "inAnimation 300ms ease-in" }
-                : {
-                    animation: "outAnimation 270ms ease-out",
-                    animationFillMode: "forwards",
-                  }
-            }
-            className={classes.menuName}
-          >
-            Services
-          </span>
-        </li>
-        <li
-          onMouseOver={(e) => {
-            e.target.nextSibling.style.display = "block";
-            setShow(true);
-          }}
-          onMouseOut={(e) => {
-            e.target.nextSibling.style.display = "none";
-            setShow(false);
-          }}
-          className={classes.menuItem}
-        >
           <span className="material-symbols-outlined">school</span>
           <span
             style={
@@ -110,6 +84,32 @@ export default function Menu() {
             className={classes.menuName}
           >
             Skills
+          </span>
+        </li>
+        <li
+          onMouseOver={(e) => {
+            e.target.nextSibling.style.display = "block";
+            setShow(true);
+          }}
+          onMouseOut={(e) => {
+            e.target.nextSibling.style.display = "none";
+            setShow(false);
+          }}
+          className={classes.menuItem}
+        >
+          <span className="material-symbols-outlined">design_services</span>
+          <span
+            style={
+              show
+                ? { animation: "inAnimation 300ms ease-in" }
+                : {
+                    animation: "outAnimation 270ms ease-out",
+                    animationFillMode: "forwards",
+                  }
+            }
+            className={classes.menuName}
+          >
+            Services
           </span>
         </li>
         <li

@@ -1,25 +1,67 @@
+import Title from "../Title/Title";
 import classes from "./styles/About.module.css";
+import Avatar from "@mui/material/Avatar";
+import myImage from "../../../Assets/Images/herosec1.jpg";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export default function About() {
   return (
-    <div className={classes.about}>
-      What is Lorem Ipsum? Lorem Ipsum is simply dummy text of the printing and
-      typesetting industry. Lorem Ipsum has been the industry's standard dummy
-      text ever since the 1500s, when an unknown printer took a galley of type
-      and scrambled it to make a type specimen book. It has survived not only
-      five centuries, but also the leap into electronic typesetting, remaining
-      essentially unchanged. It was popularised in the 1960s with the release of
-      Letraset sheets containing Lorem Ipsum passages, and more recently with
-      desktop publishing software like Aldus PageMaker including versions of
-      Lorem Ipsum. Why do we use it? It is a long established fact that a reader
-      will be distracted by the readable content of a page when looking at its
-      layout. The point of using Lorem Ipsum is that it has a more-or-less
-      normal distribution of letters, as opposed to using 'Content here, content
-      here', making it look like readable English. Many desktop publishing
-      packages and web page editors now use Lorem Ipsum as their default model
-      text, and a search for 'lorem ipsum' will uncover many web sites still in
-      their infancy. Various versions have evolved over the years, sometimes by
-      accident, sometimes on purpose (injected humour and the like).
+    <div className="mt-5">
+      <Title text={"About Me"} />
+      <div className={`mt-5 d-flex p-5 ${classes.aboutBody}`}>
+        <Avatar
+          alt="Nahid Hossain"
+          src={myImage}
+          sx={{
+            width: 200,
+            height: 200,
+            border: `8px solid rgba(0, 0, 0, 0.2)`,
+            marginBottom: 1,
+          }}
+        />
+        <div className={`d-flex ${classes.textSec}`}>
+          <h2 style={{ fontWeight: `700`, color: `#130f40` }}>Hello,</h2>
+          <p style={{}}>
+            I'm a Web-Developer. I have rich experience in Web Application
+            development &amp; Wordpress Customization. Also I Am Good At
+            Frontend development with Html, Css, Javascript, React, Material-Ui,
+            Bootstrap, Redux &amp; Backend with Nodejs, MongoDB, express. I
+            have a good knowledge about Firebase, Authentication.
+          </p>
+          <div className={`${classes.intro}`}>
+            <span><strong>Name:</strong> Md. Nahid Hossain</span>
+            <span><strong>Birthday:</strong> 30 October 2001</span>
+            <span><strong>Location:</strong> Dinajpur,Bangladesh</span>
+            <span><strong>Email:</strong> hhhssnahiid@gmail.com</span>
+          </div>
+          <Stack spacing={2} direction="row" sx={{ marginTop: `20px` }}>
+        <Button
+          sx={{
+            background: `linear-gradient(to right, #a538e3 , #cf22ca)`,
+          }}
+          variant="contained"
+        >
+          <span style={{ fontSize: `15px` }} class="material-symbols-outlined">
+            cloud_download
+          </span>
+          <span style={{ marginLeft: `.5em` }}>Download CV</span>
+        </Button>
+        <Button
+          sx={{
+            background: `linear-gradient(to right, #a538e3 , #cf22ca)`,
+          }}
+          variant="contained"
+        >
+          <span style={{ fontSize: `15px` }} class="material-symbols-outlined">
+            mail
+          </span>
+          <span style={{ marginLeft: `.5em` }}>Hire Me</span>
+        </Button>
+      </Stack>
+        </div>
+        
+      </div>
     </div>
   );
 }

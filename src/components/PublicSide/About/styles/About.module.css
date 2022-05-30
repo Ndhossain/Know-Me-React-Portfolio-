@@ -1,4 +1,14 @@
-.about {
-  height: 100%;
-  width: 200px;
+.aboutBody {
+    gap: 5em;
+}
+
+.textSec {
+    gap: 1em;
+    flex-direction: column;
+}
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
 }

@@ -3,42 +3,9 @@ import myImage from "../../../Assets/Images/herosec1.jpg";
 import Avatar from "@mui/material/Avatar";
 import AnimatedText from "./AnimatedText";
 import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
 
 export default function HeroSec() {
-  var width = 350;
-  var height = 275;
-
-  function init() {
-    var waterModel = (width, height, {
-      resolution: 2.0,
-      interpolate: false,
-      damping: 0.985,
-      clipping: 5,
-      evolveThreshold: 0.05,
-      maxFps: 30,
-      showStats: true,
-    });
-
-    console.log(waterModel)
-
-    var waterCanvas = (
-      width,
-      height,
-      "waterHolder",
-      waterModel,
-      {
-        backgroundImageUrl: "images/yourimage.jpg",
-        lightRefraction: 9.0,
-        lightReflection: 0.1,
-        maxFps: 20,
-        showStats: true,
-      }
-    );
-    console.log(waterCanvas)
-  }
-
-  init()
-
   return (
     <div className={classes.herosec}>
       <Avatar
@@ -58,15 +25,30 @@ export default function HeroSec() {
       >
         I'm a <AnimatedText /> Developer
       </span>
-      <Button
-        sx={{
-          background: `linear-gradient(to right, #a538e3 , #cf22ca)`,
-          marginTop: `20px`,
-        }}
-        variant="contained"
-      >
-        <span>Download CV</span>
-      </Button>
+      <Stack spacing={2} direction="row" sx={{ marginTop: `20px` }}>
+        <Button
+          sx={{
+            background: `linear-gradient(to right, #a538e3 , #cf22ca)`,
+          }}
+          variant="contained"
+        >
+          <span style={{ fontSize: `15px` }} class="material-symbols-outlined">
+            cloud_download
+          </span>
+          <span style={{ marginLeft: `.5em` }}>Download CV</span>
+        </Button>
+        <Button
+          sx={{
+            background: `linear-gradient(to right, #a538e3 , #cf22ca)`,
+          }}
+          variant="contained"
+        >
+          <span style={{ fontSize: `15px` }} class="material-symbols-outlined">
+            mail
+          </span>
+          <span style={{ marginLeft: `.5em` }}>Hire Me</span>
+        </Button>
+      </Stack>
     </div>
   );
 }

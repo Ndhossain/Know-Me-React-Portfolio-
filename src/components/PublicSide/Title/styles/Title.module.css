@@ -1,0 +1,14 @@
+.title {
+  font-weight: 700;
+  background: -webkit-linear-gradient(#a538e3, #cf22ca 80%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border {
+  width: 50px;
+  height: 5px;
+  background: linear-gradient(to right, #a538e3, #cf22ca);
+  border-radius: 6px;
+}

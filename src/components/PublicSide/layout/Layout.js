@@ -7,7 +7,7 @@ export default function Layout({ children }) {
     <main>
       <Topbar />
       <HeroSec />
-      <div>{children}</div>
+      <div className='p-2'>{children}</div>
     </main>
   );
 }
