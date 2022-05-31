@@ -12,3 +12,14 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 1em;
 }
+
+@media screen and (max-width: 1080px) {
+    .aboutBody {
+        gap: 1.5em;
+        flex-direction: column;
+    }
+
+    .intro {
+        grid-template-columns: 1fr;
+    }
+}

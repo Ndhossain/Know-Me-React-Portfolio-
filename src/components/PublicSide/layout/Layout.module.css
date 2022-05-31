@@ -1,11 +1,12 @@
 main {
-    width: calc(100% - 120px);
-    margin-left: 120px;
+    width: calc(100% - 80px);
+    margin-left: 80px;
 }
 
 @media screen and (max-width: 620px) {
     main {
         width: 100vw;
         margin-left: 0px;
+        margin-bottom: 60px;
     }
 }

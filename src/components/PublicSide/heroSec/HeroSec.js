@@ -4,8 +4,11 @@ import Avatar from "@mui/material/Avatar";
 import AnimatedText from "./AnimatedText";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import useMediaQuery from "@mui/material/useMediaQuery";
 
 export default function HeroSec() {
+  const matches = useMediaQuery("(max-width:330px)");
+
   return (
     <div className={classes.herosec}>
       <Avatar
@@ -25,14 +28,21 @@ export default function HeroSec() {
       >
         I'm a <AnimatedText /> Developer
       </span>
-      <Stack spacing={2} direction="row" sx={{ marginTop: `20px` }}>
+      <Stack
+        spacing={2}
+        direction={matches ? "column" : "row"}
+        sx={{ marginTop: `20px` }}
+      >
         <Button
           sx={{
             background: `linear-gradient(to right, #a538e3 , #cf22ca)`,
           }}
           variant="contained"
         >
-          <span style={{ fontSize: `15px` }} class="material-symbols-outlined">
+          <span
+            style={{ fontSize: `15px` }}
+            className="material-symbols-outlined"
+          >
             cloud_download
           </span>
           <span style={{ marginLeft: `.5em` }}>Download CV</span>
@@ -43,7 +53,10 @@ export default function HeroSec() {
           }}
           variant="contained"
         >
-          <span style={{ fontSize: `15px` }} class="material-symbols-outlined">
+          <span
+            style={{ fontSize: `15px` }}
+            className="material-symbols-outlined"
+          >
             mail
           </span>
           <span style={{ marginLeft: `.5em` }}>Hire Me</span>
