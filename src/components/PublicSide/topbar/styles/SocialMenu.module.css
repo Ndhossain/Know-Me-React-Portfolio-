@@ -3,6 +3,7 @@
   margin-right: 1em;
   flex-direction: column;
   position: relative;
+  z-index: 3;
 }
 
 .icon1,
@@ -56,10 +57,10 @@
 
   .socialBar {
     position: absolute;
-    top: 20px;
     background: #130F40;
     left: -6px;
     top: 30px;
+    z-index: 3;
   }
 
   .socialButton {

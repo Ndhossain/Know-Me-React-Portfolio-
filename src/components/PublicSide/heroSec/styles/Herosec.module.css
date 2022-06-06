@@ -8,7 +8,14 @@
   color: rgba(0, 0, 0, 0.3);
 }
 
-.herosec > h1 {
+.herosec > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.herosec > div > h1 {
   font-weight: 700;
   background: -webkit-linear-gradient(#a538e3, #cf22ca 80%);
   background-clip: text;
