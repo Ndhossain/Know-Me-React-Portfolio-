@@ -4,6 +4,8 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
+  z-index: -1;
 }
 
 .border {
@@ -11,4 +13,6 @@
   height: 5px;
   background: linear-gradient(to right, #a538e3, #cf22ca);
   border-radius: 6px;
+  position: relative;
+  z-index: -1;
 }

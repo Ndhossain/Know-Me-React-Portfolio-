@@ -29,7 +29,9 @@ export default function AnimatedText() {
   return (
     <span style={{ display: `inline-block` }} className={classes.animateText}>
       {text.map((val, ind) => (
-        <span key={ind}>{val}</span>
+        <span className="animee" key={ind}>
+          {val}
+        </span>
       ))}
     </span>
   );

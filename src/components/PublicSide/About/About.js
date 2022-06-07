@@ -7,9 +7,57 @@ import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import MyGallery from "./MyGallery/MyGallery";
 
+import { gsap, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function About() {
   const matches = useMediaQuery("(max-width:330px)");
   const matches2 = useMediaQuery("(max-width:620px)");
+  const avatarRef = useRef(null);
+  const textSecRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      avatarRef.current,
+      {
+        opacity: 0,
+        x: `-100%`,
+      },
+      {
+        opacity: 1,
+        duration: 1.2,
+        x: 0,
+        ease: Power3.easeIn,
+        scrollTrigger: {
+          trigger: avatarRef.current,
+          start: `top center+=200`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+
+    gsap.fromTo(
+      textSecRef.current,
+      {
+        opacity: 0,
+        x: `100%`,
+      },
+      {
+        opacity: 1,
+        duration: 1.2,
+        x: 0,
+        ease: Power3.easeIn,
+        scrollTrigger: {
+          trigger: avatarRef.current,
+          start: `top center+=${matches2 ? 400 : 200}`,
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, [matches2]);
 
   return (
     <>
@@ -21,6 +69,7 @@ export default function About() {
           }`}
         >
           <Avatar
+            ref={avatarRef}
             alt="Nahid Hossain"
             src={myImage}
             sx={{
@@ -28,11 +77,13 @@ export default function About() {
               height: 200,
               border: `8px solid rgba(0, 0, 0, 0.2)`,
               marginBottom: 1,
+              position: `relative`,
+              zIndex: `-1`,
             }}
           />
-          <div className={`d-flex ${classes.textSec}`}>
+          <div ref={textSecRef} className={`d-flex ${classes.textSec}`}>
             <h2 style={{ fontWeight: `700`, color: `#130f40` }}>Hello,</h2>
-            <p style={{}}>
+            <p>
               I'm a Web-Developer. I have rich experience in Web Application
               development &amp; Wordpress Customization. Also I Am Good At
               Frontend development with Html, Css, Javascript, React,

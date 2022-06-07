@@ -1,9 +1,28 @@
 import { useState } from "react";
 import classes from "./Styles/Menu.module.css";
 import "./Styles/menuanim.css";
+import { useEffect } from "react";
+import { gsap, Power3 } from "gsap";
 
 export default function Menu() {
   const [show, setShow] = useState(true);
+
+  useEffect(() => {
+    // body ref
+    gsap.from(`.anim`, {
+      opacity: 0,
+      duration: 1,
+      x: `-20px`,
+    });
+    gsap.to(`.anim`, {
+      opacity: 1,
+      delay: 1.5,
+      duration: .5,
+      x: 0,
+      ease: Power3.easeOut,
+      stagger: .2,
+    });
+  }, []);
 
   return (
     <div>
@@ -17,7 +36,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={`${classes.menuItem} ${classes.active}`}
+          className={`${classes.menuItem} anim ${classes.active}`}
         >
           <span className="material-symbols-outlined">home</span>
           <span
@@ -29,7 +48,7 @@ export default function Menu() {
                     animationFillMode: "forwards",
                   }
             }
-            className={classes.menuName}
+            className={`${classes.menuName}`}
           >
             Home
           </span>
@@ -43,7 +62,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={classes.menuItem}
+          className={`${classes.menuItem} anim`}
         >
           <span className="material-symbols-outlined">person</span>
           <span
@@ -69,7 +88,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={classes.menuItem}
+          className={`${classes.menuItem} anim`}
         >
           <span className="material-symbols-outlined">school</span>
           <span
@@ -95,7 +114,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={classes.menuItem}
+          className={`${classes.menuItem} anim`}
         >
           <span className="material-symbols-outlined">design_services</span>
           <span
@@ -121,7 +140,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={classes.menuItem}
+          className={`${classes.menuItem} anim`}
         >
           <span className="material-symbols-outlined">task</span>
           <span
@@ -147,7 +166,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={classes.menuItem}
+          className={`${classes.menuItem} anim`}
         >
           <span className="material-symbols-outlined">history_edu</span>
           <span
@@ -173,7 +192,7 @@ export default function Menu() {
             e.target.nextSibling.style.display = "none";
             setShow(false);
           }}
-          className={classes.menuItem}
+          className={`${classes.menuItem} anim`}
         >
           <span className="material-symbols-outlined">contacts</span>
           <span

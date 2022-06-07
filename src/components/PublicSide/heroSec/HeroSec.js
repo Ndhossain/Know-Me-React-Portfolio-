@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRef, useEffect } from "react";
 
-import { gsap, Power3 } from "gsap";
+import { gsap, Power3, Bounce } from "gsap";
 
 export default function HeroSec() {
   const matches = useMediaQuery("(max-width:330px)");
@@ -16,17 +16,16 @@ export default function HeroSec() {
   const nameRef = useRef(null);
 
   useEffect(() => {
-    console.log(avatarRef);
     // body ref
-    // gsap.from(bodyRef.current, {
-    //   duration: 0.8,
-    //   y: `50%`,
-    // });
-    // gsap.to(bodyRef.current, {
-    //   duration: 0.8,
-    //   y: 0,
-    //   ease: Power3.easeOut,
-    // });
+    gsap.from(bodyRef.current, {
+      duration: 0.8,
+      y: `50%`,
+    });
+    gsap.to(bodyRef.current, {
+      duration: 0.8,
+      y: 0,
+      ease: Bounce.easeOut,
+    });
     // avatar animation
     gsap.from(avatarRef.current, {
       opacity: 0,
