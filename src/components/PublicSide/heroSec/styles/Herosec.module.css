@@ -1,6 +1,6 @@
 .herosec {
   height: calc(100vh - 80px);
-  background: #130f40;
+  background: linear-gradient(to bottom right, #130f40, #04001f);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,14 +10,14 @@
   z-index: -1;
 }
 
-.herosec > div {
+.herosec > div > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.herosec > div > h1 {
+.herosec > div > div > h1 {
   font-weight: 700;
   background: -webkit-linear-gradient(#a538e3, #cf22ca 80%);
   background-clip: text;

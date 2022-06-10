@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useRef, useEffect } from "react";
+import AnimatedBG from "./AnimatedBG"
 
 import { gsap, Power3, Bounce } from "gsap";
 
@@ -54,8 +55,11 @@ export default function HeroSec() {
   }, []);
 
   return (
+    <>
     <div ref={bodyRef} className={classes.herosec}>
-      <div ref={avatarRef}>
+    <AnimatedBG />
+    <div style={{position: `absolute`}}>
+    <div ref={avatarRef}>
         <Avatar
           alt="Nahid Hossain"
           src={myImage}
@@ -111,5 +115,7 @@ export default function HeroSec() {
         </Stack>
       </div>
     </div>
+    </div>
+    </>
   );
 }
